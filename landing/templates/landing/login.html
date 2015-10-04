@@ -1,6 +1,12 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
 <form action="{% url 'landing:index' %}" method="post">
     {% csrf_token %}
     <input type="text" id="username" placeholder="Username" required>
     <input type="password" id="password" placeholder="Password" required>
     <input type="submit" value="Login">
 </form>
+{% endblock section %}
