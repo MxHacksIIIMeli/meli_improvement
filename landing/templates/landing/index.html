@@ -5,10 +5,10 @@
 	<title>Document</title>
 </head>
 <body>
-	<form action='#' method="post">
+	<form method="get">
 		{% csrf_token %}
 		{{ form }}
-		<input type="submit" value="Checa precios, papi.">
+		<input type="submit" placeholder="Checa los precios papi"/>
 	</form>
 </body>
 </html>
