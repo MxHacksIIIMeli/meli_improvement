@@ -18,5 +18,12 @@
 		<h3>$ {{ precio }}</h3>
 	</div>
 	{% endif %}
+	<div>
+		<p>Si tienes preguntas pendientes, da click en el siguiente botón para que las conteste por tí. </p>
+		<form method="post" action="{% url 'landing:bot' %}" >
+			{% csrf_token %}
+			<input type="submit" placeholder="¡Contéstalas!">
+		</form>
+	</div>
 </body>
 </html>
