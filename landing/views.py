@@ -14,8 +14,6 @@ def index(request):
 	prices = []
 	if request.method == 'GET':
 		q = request.GET.get('q', None)
-		p = Product(des_product=q)
-		p.save()
 		url = "https://api.mercadolibre.com/sites/MLM/search?q={}".format(q.replace(' ', '%20'))
 		print("*" * 20)
 		print(url)
@@ -30,4 +28,6 @@ def index(request):
 
 		average_price = sum(prices)/len(prices)
 		print(average_price)
+		p = Product(des_product=q, avg_price=average_price)
+		p.save()
 	return render(request, 'landing/index.html', {'form': form})
