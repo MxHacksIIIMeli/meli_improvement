@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .forms import Search
 import urllib.request
 import json
+from .models import Product
 
 # Create your views here.
 def login(request):
@@ -13,6 +14,8 @@ def index(request):
 	prices = []
 	if request.method == 'GET':
 		q = request.GET.get('q', None)
+		p = Product(des_product=q)
+		p.save()
 		url = "https://api.mercadolibre.com/sites/MLM/search?q={}".format(q.replace(' ', '%20'))
 		print("*" * 20)
 		print(url)
@@ -24,6 +27,7 @@ def index(request):
 		print(length)
 		for i in range(0, length):
 			prices.append(resp['results'][i]['price'])
+
 		average_price = sum(prices)/len(prices)
 		print(average_price)
 	return render(request, 'landing/index.html', {'form': form})
