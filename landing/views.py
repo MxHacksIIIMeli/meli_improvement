@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .forms import Search
 import urllib.request
 import json
+from . import preguntas_mercadolibre
 from .models import Product
 
 # Create your views here.
@@ -36,6 +37,5 @@ def index(request):
 	return render(request, 'landing/index.html', {'form': form})
 
 def bot(request):
-	if request.method == "POST":
-		return render(request, 'landing/preguntas.html')
+	print(preguntas_mercadolibre.obtener_respuestas())
 	return render(request, 'landing/preguntas.html')

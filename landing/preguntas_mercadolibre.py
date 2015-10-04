@@ -13,7 +13,7 @@ import sys
 import re
 # Mercadolibre
 import subprocess
-sys.path.append("lib")
+sys.path.append("/home/oscar/Escritorio/AnswerBot/landing/lib/")
 from meli import Meli
 # JSON
 import json
@@ -216,4 +216,4 @@ def obtener_respuestas():
 		respuestas_preguntas.append({"product":caracteristicas,"question_answers":atender_preguntas(questions,caracteristicas)})
 	return json.dumps(respuestas_preguntas)
 
-print(obtener_respuestas())
+#print(obtener_respuestas())
