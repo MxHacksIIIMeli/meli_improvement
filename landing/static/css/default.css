@@ -1,0 +1,84 @@
+.fleft {float:left}
+.fright {float:right}
+.fcenter {float:none;text-align:center}
+.fclear {clear:both}
+.inner_copy {border:0;color:#f00;float:left;width:50% !important;margin:-100% 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:11px}
+body {margin:0;padding:0;background:#7F765E;text-align:justify;font-family: Tahoma,Arial,Helvetica,sans-serif;font-size:11px;color:#3D3726}
+h1, h2, h3 {margin-top:0;font-family:Arial,Helvetica,sans-serif}
+h1 {font-size:1.6em;font-weight:normal}
+h2 {font-size:1.6em}
+h3 {font-size:1em}
+ul {}
+a {text-decoration:none;color:#2F2A1D}
+a:hover {border-bottom:none}
+a img {border:none}
+img.left {float:left;margin:0 20px 0 0}
+img.right {float:right;margin:0 0 0 20px}
+#header {width:1000px;margin:0 auto;height:115px;background:url(images/img01.jpg) no-repeat left top}
+/* Header */
+#logo {float:left;width:450px;padding:50px 0 0 30px}
+#logo h1, #logo p {float:left;margin:0;font-family:Arial,Helvetica,sans-serif;color:#fff}
+#logo span {color:#fff}
+#logo h1 {margin:0;padding:0;letter-spacing:-2px;text-transform:lowercase;font-size:48px}
+#logo p {letter-spacing:-1px;text-transform:lowercase;margin:0;padding:18px 0 0 3px;font-size:18px;color:#fff}
+#logo a {border:none;text-decoration:none;color:#fff}
+/* Menu */
+#menu {float:right;width:500px;height:40px}
+#menu ul {float:right;margin:0 30px 0 0;padding:74px 0 0 0;list-style:none}
+#menu li {float:left;display:inline}
+#menu a {display:block;height:30px;margin:0 1px 0 0;padding:10px 20px 0 20px;background:url(images/img06.jpg) repeat-x left top;text-decoration:none;text-transform:lowercase;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:#BFB28D}
+#menu a:hover {color:#fff}
+#menu .current_page_item a {color:#fff}
+/* Wrapper */
+#wrapper {width:100%;margin:0;padding:0}
+/* Page */
+#page {width:940px;margin:0 auto;padding:10px 30px;background:#BFB28D url(images/img02.jpg) repeat-y left top}
+/* Latest Post */
+#latest-post {padding:20px;border:1px solid #E7E7E7}
+/* Content */
+#content {float:left;width:480px;margin:0;padding:20px 10px}
+.post {padding-bottom:15px;line-height:200%;background:url(images/img05.jpg) repeat-x left 22px}
+.post h1 {font-weight:normal}
+.title {margin:0;padding:0;letter-spacing:-2px;text-transform:lowercase;font-size:30px;font-weight:normal}
+.title a {border-bottom:none;color:#2F2A1D}
+.byline {margin:-4px 0 20px 0;padding:20px 20px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:11px}
+.byline a {color:#666}
+.tag {padding:0 15px}
+.entry {padding:0 20px}
+.links {}
+.links a {width:100px;display:block;margin:0;padding:0;background:#590202;text-align:center;color:#FFF}
+.links a:hover {}
+/* Sidebars */
+#sidebar1 {float:left;width:220px}
+#sidebar2 {float:right;width:220px}
+.sidebar {float:left;color:#3D3726}
+.sidebar ul {margin:0;padding:0;list-style:none}
+.sidebar li {background:url(images/img05.jpg) repeat-x left top}
+.sidebar li ul {background:none;margin-bottom:40px}
+.sidebar li li {line-height:220%;padding:0 16px 0 16px;background:none}
+.sidebar li h2 {height:32px;padding:8px 0 0 15px;background:url(images/img04.jpg) no-repeat left top;letter-spacing:-1px;text-transform:lowercase;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:normal;color:#fff}
+.sidebar h2 a {}
+.sidebar a {color:#2F2A1D}
+/* Search */
+#searchform {margin:0;padding:0 0 20px 0}
+#searchform br {display:none}
+#searchform h2 {}
+#s {margin:10px 0 0 15px;padding:2px 2px;width:165px;height:18px;border:1px solid #ccc;background:#fff;font-size:10px;color:#000}
+#x {margin:0;padding:2px 5px;height:25px;background:#CA8186;text-decoration:none;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#ccc}
+/* Calendar */
+#calendar_wrap {padding:10px 15px;text-align:center}
+#calendar_wrap table {width:100%}
+#calendar_wrap th {}
+#calendar_wrap td {}
+#calendar_wrap tfoot td {border:none}
+#calendar_wrap tfoot td#prev {text-align:left;font-weight:bold;border:none}
+#calendar_wrap tfoot td#prev a {border:none}
+#calendar_wrap tfoot td#next {text-align:right;font-weight:bold;border:none}
+#calendar_wrap tfoot td#next a {border:none}
+/* Footer */
+#footer-wrapper {width:100%;height:100px}
+#footer {width:1000px;height:100px;margin:0 auto;padding:0;background:url(images/img03.jpg) no-repeat left top}
+#footer p {margin:0;padding:30px 30px 0 30px;text-align:center;text-transform:uppercase;font-size:10px;font-family:Arial,Helvetica,sans-serif;color:#B8AB86}
+#footer a {color:#B8AB86}
+#footer .link {}
+#footer .copyright {}
