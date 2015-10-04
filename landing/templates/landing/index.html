@@ -5,10 +5,18 @@
 	<title>Document</title>
 </head>
 <body>
-	<form method="get">
-		{% csrf_token %}
-		{{ form }}
+	<div>
+		<form method="get">
+			{% csrf_token %}
+			{{ form }}
 		<input type="submit" placeholder="Checa los precios papi"/>
 	</form>
+	</div>
+	{% if precio %}
+	<div>
+		<p>El precio promedio del producto que buscas es de: </p>
+		<h3>$ {{ precio }}</h3>
+	</div>
+	{% endif %}
 </body>
 </html>

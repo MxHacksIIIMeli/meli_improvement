@@ -30,4 +30,6 @@ def index(request):
 		print(average_price)
 		p = Product(des_product=q, avg_price=average_price)
 		p.save()
-	return render(request, 'landing/index.html', {'form': form})
+		return render(request, 'landing/index.html', {'form': form, 'precio': average_price})
+	else:
+		return render(request, 'landing/index.html', {'form': form})
