@@ -1,2 +1,14 @@
-<h1>Responderé las preguntas pendientes más generales, ve a ser productivo.</h1>
+
+{% for i in preguntas %}
+	<h1>{{ i.title }}</h1>
+	<img src="{{ i.image }}" alt="{{ i.title }}" />
+	<ul>
+		{% for question in i.questions %}
+		<li>
+			<p><strong>Pregunta</strong> {{ question.question }}</p>
+			<p><strong>Respuesta:</strong> {{ question.answer }}</p>
+		</li>
+		{% endfor %}	
+	</ul>
+{% endfor %}
 <a href="{% url 'landing:index' %}" method="post">Regresar al home.</a>

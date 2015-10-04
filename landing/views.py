@@ -37,5 +37,29 @@ def index(request):
 	return render(request, 'landing/index.html', {'form': form})
 
 def bot(request):
-	print(preguntas_mercadolibre.obtener_respuestas())
-	return render(request, 'landing/preguntas.html')
+	p = json.loads(preguntas_mercadolibre.obtener_respuestas())
+	#p = p.json()
+	print(p)
+	res = []
+	for i in p:
+		temp_dict = {
+			'image': i["product"]["pictures"][0]["url"],
+			'title': i["product"]["title"],
+			'questions': [],
+		}
+		# texto = i["product"]["title"]+"</br>"+"<img src=\""+i["product"]["pictures"][0]["url"]+"\" >"
+		for preguntas in i["question_answers"]:
+			if(preguntas["answer"]==""):
+				t2 = {
+					'question': preguntas["question"],
+					'answer': "No se pudo generar",
+				}
+			else:
+				t2 = {
+					'question': preguntas["question"],
+					'answer': preguntas["answer"],
+				}
+			temp_dict['questions'].append(t2)
+			# texto = texto+"<br>Pregunta: "+preguntas["question"]+"<br>Respuesta automática: "+preguntas["answer"]
+		res.append(temp_dict)
+	return render(request, 'landing/preguntas.html', {'preguntas': res})

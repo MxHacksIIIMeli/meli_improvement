@@ -13,7 +13,8 @@ import sys
 import re
 # Mercadolibre
 import subprocess
-sys.path.append("/home/oscar/Escritorio/AnswerBot/landing/lib/")
+#sys.path.append("/home/oscar/Escritorio/AnswerBot/landing/lib/")
+sys.path.append("/home/guillermosipe/Documentos/mxhacks/meli_improvement/landing/lib/")
 from meli import Meli
 # JSON
 import json
